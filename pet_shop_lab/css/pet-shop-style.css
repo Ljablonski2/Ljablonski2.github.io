@@ -1,0 +1,56 @@
+body {
+background-color: #809fff;
+}
+
+a {
+	text-decoration: none;
+}
+.fish a {
+	color: orange;
+	text-decoration: underline;
+	
+}
+
+.mammals a {
+	color: red;
+	font-weight: bold;
+	
+}
+
+.birds a {
+	color: blue;
+	font-style: italic;
+	}
+
+
+li {
+	background-color: white;
+	padding: 30px;
+	font-size: 30px;
+	width: 15%;
+	text-align: center;
+	display: flex; 
+	flex direction: column;
+	justify-content: center;
+}
+
+li:hover {
+	opacity: 0.5;
+}
+
+ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
