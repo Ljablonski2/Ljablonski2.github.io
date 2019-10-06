@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background: red;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+}
+
+header: after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+}
+
+.nav1{
+    float: right;
+}
+
+.nav1 ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav1 li{
+    display: block;
+    margin left: 10px;
+    padding-top: 5px;
+
+}
+
+.nav1 a{
+    color: white;
+    text decoration: none;
+    font-size: 25px;
+}
+
+.nav1 a:hover{
+    color: black;
+}
+
+.nav1 input[type=text]{
+    float: right;
+    padding: 5px;
+    border: none;
+    margin-top: 8px;
+    margin-right:16px;
+    font-size: 19;
+}
+
+/* grid starter.wrapper {
+    display: grid;
+    grid-template-columns: 200px 50px 100px;
+    grid-template-rows: 50px 50px;
+} from freecodecamp/*
+
+
+/* to add things to the grid
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} fromfreecodecamp*/
+
+
+
