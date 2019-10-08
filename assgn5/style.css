@@ -1,22 +1,98 @@
-body {
-    margin: 0;
-    background: red;
-}
+/*:root {
+    --header: #FF5959;
+    --bluebar: #4F9DA6;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+/* I learned this root variable format from the Traversy Media YouTube video cited in my source doc.*/
 
 .container {
-    width: 80%;
+    display:grid;
+    grid-template-columns: repeat(4,400px);
+    grid-template-rows: [row1-start] 70px [row1-end row2-start] 30px [row2-end row3-start] 400px [row3-end row4-start] 325px [row4-end row5-start] 30px [row5-end row6-start] 25px [row6-end];
+    background-color: white;
+*/}
+
+/* my classmate Rituparna Roychoudhury taught me how to do the grid-template rows above ^ and directed me to CSStricks.com for more information*/
+
+
+.grid {
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(6,400px);
+    grid-template-rows: 70px 30px 400px 325px 30px 25px;
+}
+
+.body {
     margin: 0 auto;
+    padding:0;
+    background-color: white;
 }
 
-header {
+/*from freecodecamp*/
+
+#test {
+    color:red;
+    text-decoration-color: red;
+    width: 50%;
+    height: 50%;
+}
+
+.header {
+    background:#FF5959;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+
+.bluebar{
+    background:#4F9DA6;
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+
+.hero{
+    grid-row-start:3;
+    grid-row-end:4;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+
+.features{
     background: white;
+    grid-row-start:1;
+    grid-row-end:5;
+    grid-column-start:1;
+    grid-column-end:5;
 }
 
-header: after {
-    content: '';
-    display: table;
-    clear: both;
+.subbar{
+    background:#4F9DA6;
+    grid-row-start:5;
+    grid-row-end:6;
+    grid-column-start:1
+    grid-column-end:5;
 }
+
+.bottom{
+    background:#FEE666;
+    grid-row-start:6;
+    grid-row-end:7;
+    grid-column-start:1
+    grid-column-end:5;
+}
+
+.copyright{
+    background:#FEE666;
+    grid-row-start:6;
+    grid-row-end:7;
+    grid-column-start:1
+    grid-column-end:5;
+}
+
 
 .logo {
     float: left;
@@ -26,16 +102,15 @@ header: after {
     float: right;
 }
 
-.nav1 ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.nav3 ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav1 li{
-    display: block;
-    margin left: 10px;
-    padding-top: 5px;
+
+.nav3 li{
+display: inline;
 
 }
 
@@ -57,6 +132,8 @@ header: after {
     margin-right:16px;
     font-size: 19;
 }
+
+
 
 /* grid starter.wrapper {
     display: grid;
