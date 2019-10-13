@@ -1,0 +1,383 @@
+/*:root {
+    --header: #FF5959;
+    --bluebar: #4F9DA6;
+    --light: #fff;
+}
+*/
+/* I learned this root variable format from the Traversy Media YouTube video cited in my source doc.*/
+
+
+
+
+
+
+    /*justify-content: center
+    justify-content: space-evenly
+    justify-content: space-around;
+    align-content:end*/
+}
+
+/* my classmate Rituparna Roychoudhury taught me how to do the grid-template rows above ^ and directed me to CSStricks.com for more information*/
+
+
+/*.grid {
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(6,400px);
+    grid-template-rows: 70px 30px 400px 325px 30px 25px;
+}*/
+
+/*.body {
+    margin: 0 auto;
+    padding:0;
+    background-color: white;
+}*/
+
+/*from freecodecamp*/
+.container {
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 35px 35px 30px 400px 325px 30px 25px 20px;
+    border: 7px solid #000;
+}
+
+.header{
+    background:#FF5959;
+    grid-row: 1/3;
+    grid-column: 1/-1;
+}
+
+.nav1 input[type=text]{
+    padding: 5px;
+    border: none;
+    margin-top: 5px;
+    margin-right:10px;
+    font-size: 12px;
+    color: white;
+    z-index:1;
+}
+
+.nav1 {
+    float: left;
+    grid-row:1/2;
+    grid-column:3/4;
+    display:inline;
+}
+
+.nav1 ul {
+    color: black;
+    font-size: 15px;
+    list-style-type: none;
+    text-decoration: none;
+    display:inline;
+}
+
+.nav2{
+float: left;
+
+  margin: 0;
+  padding: 0;
+  /*grid-row:2/3;*/
+  /*grid-column: 2/4;*/
+  /*color: white;*/
+  z-index:1;
+}
+
+.nav2 li{
+    text-decoration: none;
+    display:inline;
+    grid-row:2/3;
+    grid-column: 2/4;
+}
+
+
+.logo{
+    justify-content: flex-start;
+    width:12%;
+    /*grid-area: span"h1"/"b";*/
+}
+
+.bluebar{
+    background:#4F9DA6;
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    /* grid-area:b;*/
+}
+
+.hero{
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    /*grid-area: i;*/
+}
+
+.hero-text > button{
+    text-align:center;
+    position: absolute;
+    justify-content: center;
+    vertical-align: center;
+    color:white;
+    background-color: #FFAD5A;
+    z-index:1;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 60px;
+    font-size: 50px;
+    font-family: lustria;
+    border:2px solid #FEE666;
+}
+
+/*img{
+    width: 100%
+}*/
+#heroimg{
+    width:100%;
+    height:400px;
+    object-fit: cover;
+    background-image: url(img/hero_image_buns_SMALL.jpg);
+    z-index: 0;
+}
+
+
+.feature{
+    align-content: center;
+    width:33%;
+    grid-row:4/5;
+    grid-column:1/4;
+    float: left;
+
+}
+
+.recipe{
+    grid-row:5/6;
+    grid-column-start:1;
+    grid-column-end:2;
+    /*grid-area: recipe;*/
+    font-family: lustria;
+    font-size: 24px;
+}
+
+.IG{
+    grid-row:5/6;
+    grid-column-start:2;
+    grid-column-end:3;
+    /*grid-area:g;*/
+    font-family: lustria;
+    font-size: 24px;
+}
+
+.pspice{
+    grid-row:5/6;
+    grid-column-start:3;
+    grid-column-end:4;
+    /*grid-area:p;*/
+    font-family: lustria;
+    font-size: 24px;
+}
+
+.circle-image{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit:cover;
+}
+
+
+.subbar{
+    background:#4F9DA6;
+    grid-row:6/7;
+    grid-column: 1/-1;
+    color: white;
+    font-family: lustria;
+    font-size: 20px;
+    /*grid-area:s;*/
+}
+
+.subbar button{
+    font-family: lustria;
+    font-size: 18px;
+    color: #4F9DA6
+    width: 300px;
+    height:30px;
+}
+
+
+.bottom{
+    display:grid;
+    background:;
+    grid-row:7/8;
+    grid-column:1/-1;
+    font-family: lustria;
+    padding-right: 20px;
+    color: #FF5959;
+    /* grid-area:r;*/
+}
+
+.copyright{
+    background: white;
+    grid-row:8/9;
+    grid-column: 1/-1;
+    color: black;
+    /*grid-area:c;*/
+}
+
+
+.bottom ul{
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding-right: 180px;
+  background: #FEE666;
+  color: #FF5959;
+  text-align: right;
+  background color: span 1/-1;
+}
+
+
+.bottom li{
+display: inline;
+grid-row:7/8;
+grid-column:3/4;
+color: #FF5959;
+
+
+}
+
+.nav1 {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 25px;
+    grid-row:1/2;
+    grid-column:3/4;
+}
+
+.nav1 a:hover{
+    color: black;
+}
+
+#search{
+    width: 20px;
+    height: 20px;
+}
+
+
+/*.nav2 ul{
+    list-style: none;
+    text-decoration: none;
+    font-family: lustria;
+    font size: 10px;
+    grid-row:2/3;
+    grid-column:2/4;
+    z-index:1;
+}*/
+
+/* grid starter.wrapper {
+    display: grid;
+    grid-template-columns: 200px 50px 100px;
+    grid-template-rows: 50px 50px;
+} from freecodecamp/*
+
+
+/* to add things to the grid
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} fromfreecodecamp*/
+
+
+/*MENU  PAGE*/
+
+.container2 {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 35px 35px 30px 400px 400px 30px 25px;
+    border: 7px solid #000;
+}
+
+.imgdetail{
+    height:200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+/*.menurow1{*/
+    justify-content:grid-column-start;
+/*}*/
+
+/*.menurow2{*/
+    justify-content:grid-column-start;
+/*}*/
+/*#menurow1{
+    display:inline-flex;
+    grid-row:4/5;
+    grid-column:2/span 2;
+    align-content: right;
+    padding-left:20px;
+    padding-right:20px;
+}*/
+
+/*#menurow2{
+    display: inline-flex;
+    grid-row:5/6;
+    grid-column:2/span 2;
+    align-content: right;
+    padding-left:20px;
+    padding-right:20px;
+/*}*/
+
+#mnav1{
+    display:inline-flex;
+    grid-row:1/2;
+    grid-column:4/6;
+    text-decoration: none;
+    list-style: none;
+}
+
+#og{
+    grid-row:4/5;
+    grid-column: 2/3;
+    padding-right: 30px;
+    padding-top:20px;
+}
+
+#bb{
+    grid-row:4/5;
+    grid-column:3/4;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+#walnut{
+    grid-row:4/5;
+    grid-column:4/5;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+#oggf{
+    grid-row:5/6;
+    grid-column:2/3;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+#pspice{
+    grid-row:5/6;
+    grid-column:3/4;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+#cp{
+    grid-row:5/6;
+    grid-column:4/5;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+/*Blackberry Cinnamon Bun Page*/
+
+
