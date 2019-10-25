@@ -76,7 +76,7 @@
 .nav2{
 float: left;
 
-  margin: 0;
+  margin-left: 350px;
   padding: 0;
   /*grid-row:2/3;*/
   /*grid-column: 2/4;*/
@@ -127,6 +127,10 @@ float: left;
     font-size: 50px;
     font-family: lustria;
     border:2px solid #FEE666;
+}
+
+.content{
+    float:right
 }
 
 /*img{
