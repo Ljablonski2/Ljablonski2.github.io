@@ -1,65 +1,55 @@
-function updatecartpage() {
-    localStorage.setItem("cartbtn", cart);
-
-    // count items in my cart
-    var buns = 0;
-
-    var i;
-    for (i = 0; i < cart.length; i++) {
-        var item = cart[i];
-        item = item.split(".");
-        // replaces string with list
-        var g = item[0];
-        var q = parseInt(item[1]);
-        buns = buns + q;
-    }
-
-    // document.getElementById("totalcrt").innerHTML = "cart: " + cart + "<br>Price: $" + (3.99*buns).toFixed(2);
-
-
-}
-
-document.getElementById("cartbtn").addEventListener("click", function() {
-    cart.push(glaze +"."); //.  sugarmilk.4,choc.8,reg.12
-    // variable glaze not name
-    updatecartpage();
-});
-
-
-document.getElementById("glazedetail").addEventListener("change", function() {
-    glaze = document.getElementById("glazedetail").value;
-    updatecartpage();
-    console.log("glaze");
-});
-
-document.getElementById("quantity").addEventListener("change", function(){
-    quantity = document.getElementById("quantity").value;
-    updatecartpage();
-    console.log("quantity");
-});
-
-
-var glaze = "sugarmilk";
-var quantity = "1";
-var price= 3.99
-
-var cart = localStorage.getItem("cartbtn");
-if(cart == null) {
+var cart = JSON.parse(localStorage.getItem("mycart"));
+if (cart == null) {
     cart = [];
 }
-else {
-    cart = cart.split(",");
+
+displayCart();
+
+document.getElementById("remove").addEventListener("click", remove);
+
+
+// my tutor Nathan taught me how to do the cartHTML += formatting below to make my shopping cart
+//HTML code dynamic via javascript instead//
+
+function displayCart() {
+    var cartHTML = "";
+    for (var i = 0; i < cart.length; i++) {
+        cartHTML += '<div class="leftcart">';
+        cartHTML +=
+            '    <a href="detail2.html"><img src="img/blackberry.jpg" alt="blackberry cinnamon buns" id="bbproduct"/></a>';
+        cartHTML += "</div>";
+
+        cartHTML += '<div class="rightcart">';
+        cartHTML += "    <p3>" + cart[i].name + "</p3>";
+        cartHTML +=
+            '    Quantity:<input type="text" readonly="" class="tbx" id="quantbx" value="' +
+            cart[i].quantity +
+            '"><br>';
+        cartHTML +=
+            '    Glaze:<input type="text" readonly="" class="tbx" id="glazebx" value="' +
+            cart[i].glaze +
+            '"><br>';
+        cartHTML +=
+            '    Price:<input type="text" readonly="" class="tbx" id="pricebx" value="' +
+            cart[i].price +
+            '"><br>';
+        cartHTML +=
+            '    <p4 id="p4">Total: <input type="text" readonly="" class="tbx" id="totalcrt" value="' +
+            cart[i].quantity * cart[i].price +
+            '"></p4>';
+        cartHTML += "</div>";
+    }
+
+    document.getElementById("cartDisplay").innerHTML = cartHTML;
 }
 
 
-// updatecartpage();
+// my TA Sai taught me how to use JSon.stringify to turn the cart items into strings for
+// the local storage array.
 
-updatedeetpage();
-
-function updatedeetpage() {
-    console.log("button");
-    document.getElementById("deettotal").textContent="total: $" + quantity*3.99;
-    console.log('quantity is: ' + quantity);
-    document.getElementById("carttext").innerHTML=quantity;
-
+function remove() {
+    cart = [];
+    localStorage.setItem("mycart", JSON.stringify(cart));
+    displayCart();
+    console.log(cart)
 }
