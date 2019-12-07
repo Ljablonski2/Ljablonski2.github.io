@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <link rel= "stylesheet" type="text/css" href="Assign8.css">
+  <title>Interactive Bookshelf</title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- LEFT SIDE -->
+        <div class="col-sm-5">
+
+            <h1>Digital Classics</h1><br>
+            <p1>Read your favorite classics for free.</p1><br>
+            <p2>Try the spiral surprise for something new.</p2><br>
+
+            <div class="rowBKS" id="">
+                <img src="Assets/RadialBkShlf.svg" id="RadialShelf" onclick="bookspin()">
+                    <!--Creates the popup body-->
+                    <div class="popup-overlay">
+                    <!--Creates the popup content-->
+                     <div class="popup-content">
+                        <h2>Pop-Up</h2>
+                        <p> This is an example pop-up that you can make using jQuery.</p>
+                        <!--popup's close button--> 
+        </div>
+        </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-sm-7">
+            <!-- bookshelf background -->
+            <div class = "BKEshelf">
+                <img src= "Assets/EmptyBkShlf.png" alt="Empty Bookshelf" id="BKshelf">
+            </div>
+
+            <!-- books on top -->
+            <div class="floatontop">
+                <div class= "rowBK" id="row1">
+                    <img src= "Assets/vert2.png" alt="Plain yellow vertical book">
+                    <img src= "Assets/alice2.png" alt="Alice's Adventures in Wonderland Book">
+                    <img src= "Assets/horiz2.png" alt="Plain yellow horizontal book">
+                    <img src= "Assets/JaneEyre2.png" alt="Jane Eyre Book">
+                </div>
+                <div class= "rowBK1" id="row2">
+                    <img src= "Assets/AliceBK.svg" alt="plain yellow vertical book">
+                    <img src= "Assets/mobydick.png" alt="Moby Dick Book">
+                    <img src= "Assets/vert2.png" alt="Plain yellow vertical book">
+                    <img src= "Assets/vert2.png" alt="Plain yellow vertical book">
+                </div>
+                <div class= "rowBK2" id="row3">
+                    <img src= "Assets/horiz2.png" alt="plain yellow horizontal book">
+                    <img src= "Assets/odyssey.png" alt="Odyssey Book">
+                    <img src= "Assets/vert2.png" alt="Plain yellow vertical book">
+                    <img src= "Assets/horiz2.png" alt="plain yellow horizontal book">
+                </div>
+                <div class= "rowBK3" id="row4">
+                    <img src= "Assets/horiz2.png" alt="plain yellow horizontal book">
+                    <img src= "Assets/horiz2.png" alt="plain yellow horizontal book">
+                    <img src= "Assets/TimeMachine2.png" alt="The Time Machine Book">
+                </div>
+            </div>
+            
+
+
+
+
+
+            
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="assign8.js"></script>
+
+</body>
+</html>

@@ -1,12 +1,115 @@
-.container{
+.container-fluid{
     background-color: #E8C9C9;
 }
 
-#BKshelf{
-    position:relative;
-    margin-right:50px;
+h1{
+    font-family: Baskerville;
+    font-size: 60px;
+    margin-left: 60px;
+
 }
-#Radialshelf{
+
+#p1{
+    font-family: Baskerville;
+    font-size: 30px;
+    margin-left: 60px;
+    text-align: left;
+}
+
+#p2{
+    font-family: Baskerville;
+    font-size: 30px;
+    margin-left: 60px;
+    text-align: left;
+}
+
+.BKEshelf{
+    position: relative;
+    margin-top: 20px;
+    z-index:1;
+}
+
+#RadialShelf{
+    margin: auto;
+    display: block;
+    margin-left: 80px;
+}
+
+
+.floatontop {
     position: absolute;
-    padding-top: 200px;
+    top: 86px;
+    display: inline-block;
+    z-index: 2;
+    margin-left: 60px;
+}
+
+#ReadMore{
+    font-family: Baskerville;
+    font-size: 30px;
+    margin-left: 60px;
+    text-align: left;
+    padding-top: 30px;
+}
+
+#row2{
+    padding-top:10px;
+}
+
+#row3{
+    padding-top:18px;
+}
+
+#row4{
+    padding-top: 60px;
+}
+
+/*Secret Books that will Pop*/
+
+#secretA{
+    position:absolute;
+    display:none;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
+#secretB{
+    position:absolute;
+    display:none;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
+#secretC{
+    position:absolute;
+    display:none;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
+#secretD{
+    position:absolute;
+    display:none;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
+#secretE{
+    position:absolute;
+    display:none;
+    margin-left: 50%;
+    margin-top: 20%;
+
+}
+
+
+
+#BehindSecret{
+position:absolute;
+display:none;
+background-color: rgba(0,0,0,0.5);
+width:100vw;
+height:100vh;
+z-index:10;
+
 }
